@@ -8,8 +8,7 @@
         "symfony/yaml": "^3.3"
     },
     "license": "MIT",
-    "authors": [
-        {
+    "authors": [{
             "name": "Taylor Otwell",
             "email": "taylorotwell@gmail.com"
         },
