@@ -9,11 +9,14 @@ require '../vendor/autoload.php';
 use Medoo\Medoo;
 
 // Initialize
-$database = new Medoo([
-    'database_type' => 'sqlite',
-    'database_file' => '../storage/database.db'
-
-    ]);
+$file = '../storage/database.db';
+if (is_writable('../storage/database.local.db')) {
+$file = '../storage/database.local.db';
+}
+$database = new medoo([
+'database_type' => 'sqlite',
+'database_file' => $file
+]);
 
     $comment = new SitePoint\Comment($database);
     $comment->setEmail('bruno@skvorc.me')
